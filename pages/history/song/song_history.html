@@ -1,0 +1,49 @@
+<section class="contents">
+    <div class="song-history-wrapper">
+        <div class="song-history-inner">
+            <div class="song-history-header">
+                <h1>Song History</h1>
+                <h2>過去の演奏曲</h2>
+                <div style="top: 50px; left:   6%;" class="contents-header-shape contents-header-medium contents-header-blue   contents-header-circle"></div>
+                <div style="top: 70px; left:  14%;" class="contents-header-shape contents-header-large  contents-header-green  contents-header-square"></div>
+                <div style="top: 60px; right:  7%;" class="contents-header-shape contents-header-medium contents-header-green  contents-header-square"></div>
+                <div style="top: 80px; right: 13%;" class="contents-header-shape contents-header-large  contents-header-violet contents-header-circle"></div>
+            </div>
+
+            <div class="song-history-select">
+                <select>
+                    <option>開催ライブ別に表示</option>
+                    <option>演奏バンド別に表示</option>
+                    <option>アーティスト別に表示</option>
+                </select>
+            </div>
+
+            <div class="song-history-content">
+                <div id="include-song-history-group"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function() {
+      $("#include-song-history-group").load("./song_history_live.html");
+    });
+
+    $('select').change(function() {
+        var text = $('option:selected').text();
+        switch (text) {
+            case '開催ライブ別に表示':
+                $("#include-song-history-group").load("./song_history_live.html");
+                break;
+            case '演奏バンド別に表示':
+                $("#include-song-history-group").load("./song_history_band.html");
+                break;
+            case 'アーティスト別に表示':
+                $("#include-song-history-group").load("./song_history_artist.html");
+                break;
+            default:
+                $("#include-song-history-group").load("./song_history_live.html");
+        }
+    });
+</script>

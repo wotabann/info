@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="をたばん,おたばん,アニソン,ライブ">
+        <meta name="description" content="不定期開催アニソン系ライブイベントの情報サイトです。">
+        <title>をたばん！</title>
+
+        <!-- スマートフォン表示対応 -->
+        <meta name="viewport" content="width=device-width">
+
+        <!-- フォントスタイル -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
+
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./scroll_up.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./../../../css/header.css">
+        <link rel="stylesheet" type="text/css" href="./../../../css/live_history.css">
+    </head>
+
+    <body>
+
+    <div id="background">
+        <div id="include-background-parallax"></div>
+        <div id="container">
+            <div id="include-live-history"></div>
+            <div id="include-footer"></div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+          $("#include-background-parallax").load("./../../../pages/background_parallax.html");
+          $("#include-header-menu").load("./../../../pages/header_menu.html");
+          $("#include-live-history").load("./live_history.html");
+          $("#include-footer").load("./../../../pages/footer.html");
+        });
+    </script>
+
+</body>
+</html>
